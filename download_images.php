@@ -35,19 +35,8 @@ $images = [
     'stoning_jamarat.jpg' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop',
     'sacrifice_ritual.jpg' => 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop',
     
-    // Medical Help
-    'king_abdullah_medical.jpg' => 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop',
-    'ajyad_hospital.jpg' => 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop',
-    'madinah_hospital.jpg' => 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=400&h=300&fit=crop',
+    // Medical Help (only 2 images needed for the updated services)
     'mobile_medical.jpg' => 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
-    'pharmacy_services.jpg' => 'https://images.unsplash.com/photo-1585435557343-3b092031fad3?w=400&h=300&fit=crop',
-    
-    // Hotel Routes
-    'makkah_hilton_route.jpg' => 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop',
-    'fairmont_route.jpg' => 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&h=300&fit=crop',
-    'conrad_route.jpg' => 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=300&fit=crop',
-    'movenpick_route.jpg' => 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&h=300&fit=crop',
-    'general_navigation.jpg' => 'https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=400&h=300&fit=crop',
 ];
 
 // Directory to save images
