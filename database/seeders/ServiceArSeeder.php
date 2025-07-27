@@ -289,9 +289,9 @@ class ServiceArSeeder extends Seeder
 
             // Forgot my Route - Emergency Contact Services
             [
-                'slug' => 'emergency-location',
-                'name' => 'موقع GPS الطارئ',
-                'description' => 'موقعك الطارئ الحالي في جدة. استخدم هذا الموقع للمشاركة مع جهات الاتصال الطارئة أو خدمات الملاحة.',
+                'slug' => 'hotel-gps-location',
+                'name' => 'موقع GPS للفندق',
+                'description' => 'إحداثيات GPS لموقع فندقك. استخدم هذا للتنقل عائداً إلى فندقك أو مشاركة موقع فندقك مع الآخرين.',
                 'price' => 0.00,
                 'image_url' => null,
                 'category_id' => $categories['forgot-route'],

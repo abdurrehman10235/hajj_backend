@@ -289,9 +289,9 @@ class ServiceEnSeeder extends Seeder
 
             // Forgot my Route - Emergency Contact Services
             [
-                'slug' => 'emergency-location',
-                'name' => 'Emergency GPS Location',
-                'description' => 'Your current emergency location in Jeddah. Use this location to share with emergency contacts or navigation services.',
+                'slug' => 'hotel-gps-location',
+                'name' => 'GPS Location of Hotel',
+                'description' => 'GPS coordinates of your hotel location. Use this to navigate back to your hotel or share your hotel location with others.',
                 'price' => 0.00,
                 'image_url' => null,
                 'category_id' => $categories['forgot-route'],
