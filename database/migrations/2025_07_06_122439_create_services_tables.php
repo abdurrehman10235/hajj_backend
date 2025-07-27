@@ -30,7 +30,7 @@ return new class extends Migration
     $table->decimal('gps_latitude', 10, 8)->nullable();
     $table->decimal('gps_longitude', 11, 8)->nullable();
     $table->string('phone_number', 20)->nullable();
-    $table->enum('contact_type', ['group', 'hotel'])->nullable();
+    $table->enum('contact_type', ['group', 'hotel', 'medical'])->nullable();
     $table->timestamps();
 });
 
@@ -45,7 +45,7 @@ Schema::create('services_ar', function (Blueprint $table) {
     $table->decimal('gps_latitude', 10, 8)->nullable();
     $table->decimal('gps_longitude', 11, 8)->nullable();
     $table->string('phone_number', 20)->nullable();
-    $table->enum('contact_type', ['group', 'hotel'])->nullable();
+    $table->enum('contact_type', ['group', 'hotel', 'medical'])->nullable();
     $table->timestamps();
 });
 

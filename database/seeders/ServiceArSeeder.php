@@ -181,46 +181,24 @@ class ServiceArSeeder extends Seeder
                 'category_id' => $categories['hajj-procedure'],
             ],
 
-            // Medical Help
+            // المساعدة الطبية
             [
-                'slug' => 'king-abdullah-medical-city',
-                'name' => 'مدينة الملك عبدالله الطبية',
-                'description' => 'مرفق طبي رئيسي في مكة يوفر خدمات رعاية صحية شاملة للحجاج. خدمات طوارئ متاحة على مدار الساعة.',
+                'slug' => 'health-tips',
+                'name' => 'نصائح صحية',
+                'description' => 'نصائح صحية أساسية للحجاج أثناء الحج. تعلم كيفية البقاء رطباً وإدارة التعب ومنع المرض والحفاظ على صحة جيدة طوال رحلة الحج.',
                 'price' => 0.00,
-                'image_url' => '/services/king_abdullah_medical.jpg',
+                'image_url' => '/services/health_tips.jpg',
                 'category_id' => $categories['medical-help'],
             ],
             [
-                'slug' => 'ajyad-emergency-hospital',
-                'name' => 'مستشفى أجياد للطوارئ',
-                'description' => 'مستشفى طوارئ متخصص بالقرب من الحرم، مجهز بمرافق حديثة وطاقم طبي متعدد اللغات.',
+                'slug' => 'call-doctor',
+                'name' => 'اتصل بالطبيب',
+                'description' => 'خدمة استشارة طبية طارئة. تواصل مباشرة مع أطباء مؤهلين للحصول على المشورة الطبية الفورية والمساعدة أثناء رحلة الحج.',
                 'price' => 0.00,
-                'image_url' => '/services/ajyad_hospital.jpg',
+                'image_url' => '/services/call_doctor.jpg',
                 'category_id' => $categories['medical-help'],
-            ],
-            [
-                'slug' => 'madinah-general-hospital',
-                'name' => 'مستشفى المدينة العام',
-                'description' => 'المستشفى الرئيسي في المدينة يوفر خدمات طبية عامة ورعاية طوارئ وعلاجات متخصصة للحجاج.',
-                'price' => 0.00,
-                'image_url' => '/services/madinah_hospital.jpg',
-                'category_id' => $categories['medical-help'],
-            ],
-            [
-                'slug' => 'mobile-medical-units',
-                'name' => 'الوحدات الطبية المتنقلة',
-                'description' => 'وحدات رعاية صحية متنقلة متمركزة في جميع أنحاء مكة والمدينة توفر رعاية طبية أساسية وإسعافات أولية.',
-                'price' => 0.00,
-                'image_url' => '/services/mobile_medical.jpg',
-                'category_id' => $categories['medical-help'],
-            ],
-            [
-                'slug' => 'pharmacy-services',
-                'name' => 'خدمات الصيدلية على مدار الساعة',
-                'description' => 'خدمات صيدلية على مدار الساعة بالقرب من المواقع المقدسة توفر الأدوية الموصوفة والأدوية التي لا تستلزم وصفة طبية.',
-                'price' => 0.00,
-                'image_url' => '/services/pharmacy_services.jpg',
-                'category_id' => $categories['medical-help'],
+                'phone_number' => '+966-12-555-0123',
+                'contact_type' => 'medical',
             ],
 
             // نسيت طريقي - خدمات الاتصال الطارئ

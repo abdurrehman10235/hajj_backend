@@ -194,7 +194,7 @@ public function searchServiceByText(Request $request)
             'gps_latitude' => 'nullable|numeric|between:-90,90',
             'gps_longitude' => 'nullable|numeric|between:-180,180',
             'phone_number' => 'nullable|string|max:20',
-            'contact_type' => 'nullable|string|in:group,hotel',
+            'contact_type' => 'nullable|string|in:group,hotel,medical',
         ]);
 
         $imagePath = null;
@@ -248,7 +248,7 @@ public function searchServiceByText(Request $request)
             'gps_latitude' => 'sometimes|nullable|numeric|between:-90,90',
             'gps_longitude' => 'sometimes|nullable|numeric|between:-180,180',
             'phone_number' => 'sometimes|nullable|string|max:20',
-            'contact_type' => 'sometimes|nullable|string|in:group,hotel',
+            'contact_type' => 'sometimes|nullable|string|in:group,hotel,medical',
         ]);
 
         $data = [];
