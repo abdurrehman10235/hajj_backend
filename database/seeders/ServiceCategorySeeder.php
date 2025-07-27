@@ -15,7 +15,7 @@ class ServiceCategorySeeder extends Seeder
             ['slug' => 'religious-places', 'name_en' => 'Routes of Religious Places', 'name_ar' => 'مسارات الأماكن الدينية'],
             ['slug' => 'hajj-procedure', 'name_en' => 'Hajj Procedure', 'name_ar' => 'إجراءات الحج'],
             ['slug' => 'medical-help', 'name_en' => 'Medical Help', 'name_ar' => 'المساعدة الطبية'],
-            ['slug' => 'hotel-routes', 'name_en' => 'Route Back to Hotel', 'name_ar' => 'طريق العودة إلى الفندق'],
+            ['slug' => 'forgot-route', 'name_en' => 'Forgot my Route', 'name_ar' => 'نسيت طريقي'],
         ]);
     }
 }

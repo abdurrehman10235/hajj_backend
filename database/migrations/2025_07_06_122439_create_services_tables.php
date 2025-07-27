@@ -27,6 +27,10 @@ return new class extends Migration
     $table->text('description');
     $table->string('image_url')->nullable();
     $table->decimal('price', 8, 2)->nullable();
+    $table->decimal('gps_latitude', 10, 8)->nullable();
+    $table->decimal('gps_longitude', 11, 8)->nullable();
+    $table->string('phone_number', 20)->nullable();
+    $table->enum('contact_type', ['group', 'hotel'])->nullable();
     $table->timestamps();
 });
 
@@ -38,6 +42,10 @@ Schema::create('services_ar', function (Blueprint $table) {
     $table->text('description');
     $table->string('image_url')->nullable();
     $table->decimal('price', 8, 2)->nullable();
+    $table->decimal('gps_latitude', 10, 8)->nullable();
+    $table->decimal('gps_longitude', 11, 8)->nullable();
+    $table->string('phone_number', 20)->nullable();
+    $table->enum('contact_type', ['group', 'hotel'])->nullable();
     $table->timestamps();
 });
 

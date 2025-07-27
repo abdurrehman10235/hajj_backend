@@ -17,11 +17,17 @@ class ServiceAr extends Model
         'name',
         'description',
         'image_url',
-        'price'
+        'price',
+        'gps_latitude',
+        'gps_longitude',
+        'phone_number',
+        'contact_type'
     ];
 
     protected $casts = [
         'price' => 'decimal:2',
+        'gps_latitude' => 'decimal:8',
+        'gps_longitude' => 'decimal:8',
     ];
 
     public function category()

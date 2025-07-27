@@ -24,6 +24,10 @@ class ServiceController extends Controller
                 "$table.description",
                 "$table.price",
                 "$table.image_url",
+                "$table.gps_latitude",
+                "$table.gps_longitude",
+                "$table.phone_number",
+                "$table.contact_type",
                 "service_categories.slug as category_slug",
                 "service_categories.$categoryNameField as category_name"
             )
@@ -133,7 +137,7 @@ public function searchServiceByText(Request $request)
         $table = $lang === 'ar' ? 'services_ar' : 'services_en';
 
         $services = DB::table($table)
-            ->select('slug', 'name', 'price', 'image_url')
+            ->select('slug', 'name', 'price', 'image_url', 'gps_latitude', 'gps_longitude', 'phone_number', 'contact_type')
             ->get();
 
         return response()->json($services);
@@ -185,8 +189,12 @@ public function searchServiceByText(Request $request)
             'name' => 'required|string',
             'slug' => 'required|string|unique:' . $table,
             'description' => 'required|string',
-            'price' => 'required|numeric',
+            'price' => 'nullable|numeric',
             'image' => 'nullable|image|max:2048',
+            'gps_latitude' => 'nullable|numeric|between:-90,90',
+            'gps_longitude' => 'nullable|numeric|between:-180,180',
+            'phone_number' => 'nullable|string|max:20',
+            'contact_type' => 'nullable|string|in:group,hotel',
         ]);
 
         $imagePath = null;
@@ -210,6 +218,10 @@ public function searchServiceByText(Request $request)
             'description' => $request->description,
             'price' => $request->price,
             'image_url' => $imagePath,
+            'gps_latitude' => $request->gps_latitude,
+            'gps_longitude' => $request->gps_longitude,
+            'phone_number' => $request->phone_number,
+            'contact_type' => $request->contact_type,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -231,8 +243,12 @@ public function searchServiceByText(Request $request)
             'category_id' => 'sometimes|exists:service_categories,id',
             'name' => 'sometimes|string',
             'description' => 'sometimes|string',
-            'price' => 'sometimes|numeric',
+            'price' => 'sometimes|nullable|numeric',
             'image' => 'nullable|image|max:2048',
+            'gps_latitude' => 'sometimes|nullable|numeric|between:-90,90',
+            'gps_longitude' => 'sometimes|nullable|numeric|between:-180,180',
+            'phone_number' => 'sometimes|nullable|string|max:20',
+            'contact_type' => 'sometimes|nullable|string|in:group,hotel',
         ]);
 
         $data = [];
@@ -248,6 +264,18 @@ public function searchServiceByText(Request $request)
         }
         if ($request->has('price')) {
             $data['price'] = $request->input('price');
+        }
+        if ($request->has('gps_latitude')) {
+            $data['gps_latitude'] = $request->input('gps_latitude');
+        }
+        if ($request->has('gps_longitude')) {
+            $data['gps_longitude'] = $request->input('gps_longitude');
+        }
+        if ($request->has('phone_number')) {
+            $data['phone_number'] = $request->input('phone_number');
+        }
+        if ($request->has('contact_type')) {
+            $data['contact_type'] = $request->input('contact_type');
         }
 
         if ($request->hasFile('image')) {
